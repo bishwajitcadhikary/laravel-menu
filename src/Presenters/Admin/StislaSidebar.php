@@ -35,7 +35,7 @@ class StislaSidebar extends Presenter
      */
     public function getActiveState($item, $state = ' class="active"')
     {
-        return \Request::is($item->getRequest()) ? ' class="active"' : null;
+        return \Request::is($item->getRequest(), $item->getRequest().'/*') ? ' class="active"' : null;
     }
 
     /**
